@@ -9,6 +9,7 @@ const cloudinary = require("cloudinary");
 //create product --Admin route
 exports.createProduct=async (req,res,next) => {
  
+  console.log("i am in");
   let images = [];
 
   if (typeof req.body.images === "string") {
@@ -39,6 +40,7 @@ exports.createProduct=async (req,res,next) => {
       success:true,
       product
     });
+    console.log("created");
   
   };
 
